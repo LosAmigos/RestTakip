@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="tr-TR">
+  <Title Text="Fatura Detay" />
+  <DataConnections>
+    <DataConnection Name="localhost_los_amigosConnection" ProviderKey="MySql">
+      <Parameters>
+        <Parameter Name="server" Value="localhost" />
+        <Parameter Name="database" Value="los_amigos" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+  </DataConnections>
+  <DataSources>
+    <DataSource ComponentName="dataSource1" Name="dash_conn">
+      <DataProvider DataConnection="localhost_los_amigosConnection" SupportSql="true">
+        <Selection>
+          <Table Name="fatura_detay">
+            <Columns>
+              <Column Name="id" Alias="id" />
+              <Column Name="stokadi" Alias="stokadi" />
+              <Column Name="miktar" Alias="miktar" />
+              <Column Name="birim" Alias="birim" />
+              <Column Name="kdvdahilmi" Alias="kdvdahilmi" />
+              <Column Name="kdvoran" Alias="kdvoran" />
+              <Column Name="kdvtutar" Alias="kdvtutar" />
+              <Column Name="birimfiyat" Alias="birimfiyat" />
+              <Column Name="toplam" Alias="toplam" />
+              <Column Name="faturano" Alias="faturano" />
+              <Column Name="tarih" Alias="tarih" />
+              <Column Name="saat" Alias="saat" />
+              <Column Name="carino" Alias="carino" />
+              <Column Name="cariadi" Alias="cariadi" />
+              <Column Name="carisoyadi" Alias="carisoyadi" />
+              <Column Name="carifirma" Alias="carifirma" />
+              <Column Name="vergidairesi" Alias="vergidairesi" />
+              <Column Name="vergino" Alias="vergino" />
+              <Column Name="kdvsiztoplam" Alias="kdvsiztoplam" />
+              <Column Name="sube" Alias="sube" />
+              <Column Name="vadetarihi" Alias="vadetarihi" />
+              <Column Name="odemetipi" Alias="odemetipi" />
+              <Column Name="faturatipi" Alias="faturatipi" />
+              <Column Name="baslikid" Alias="baslikid" />
+              <Column Name="anadepo" Alias="anadepo" />
+              <Column Name="iskontooran" Alias="iskontooran" />
+              <Column Name="iskontotutar" Alias="iskontotutar" />
+              <Column Name="stokkodu" Alias="stokkodu" />
+              <Column Name="kolidekimiktar" Alias="kolidekimiktar" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Stok Adedi" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="tarih" DateTimeGroupInterval="MonthYear" UniqueName="DataItem0" />
+        <Measure DataMember="miktar" UniqueName="DataItem1" />
+        <Dimension DataMember="stokadi" UniqueName="DataItem2" />
+        <Dimension DataMember="birim" UniqueName="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem0" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem2" />
+        <Argument UniqueName="DataItem3" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="tarih" DateTimeGroupInterval="MonthYear" UniqueName="DataItem0" />
+        <Measure DataMember="miktar" UniqueName="DataItem1" />
+        <Dimension DataMember="stokadi" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Argument UniqueName="DataItem0" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value UniqueName="DataItem1" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem Weight="81.164383561643831" DashboardItem="pieDashboardItem1" />
+      <LayoutItem Weight="18.835616438356166" DashboardItem="rangeFilterDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="tr-TR">
+  <Title Text="Üretim Hareketi" />
+  <DataConnections>
+    <DataConnection Name="localhost_los_amigosConnection" ProviderKey="MySql">
+      <Parameters>
+        <Parameter Name="server" Value="localhost" />
+        <Parameter Name="database" Value="los_amigos" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+  </DataConnections>
+  <DataSources>
+    <DataSource ComponentName="dataSource1" Name="dash_conn">
+      <DataProvider DataConnection="localhost_los_amigosConnection" SupportSql="true">
+        <Selection>
+          <Table Name="uretimhar">
+            <Columns>
+              <Column Name="SIRANO" Alias="SIRANO" />
+              <Column Name="STOKHARNO" Alias="STOKHARNO" />
+              <Column Name="GENHARNO" Alias="GENHARNO" />
+              <Column Name="ADISYONNO" Alias="ADISYONNO" />
+              <Column Name="HAMMADDEADI" Alias="HAMMADDEADI" />
+              <Column Name="STOKADI" Alias="STOKADI" />
+              <Column Name="GRUPADI" Alias="GRUPADI" />
+              <Column Name="ADET" Alias="ADET" />
+              <Column Name="CARINO" Alias="CARINO" />
+              <Column Name="TARIH" Alias="TARIH" />
+              <Column Name="BIRIM" Alias="BIRIM" />
+              <Column Name="ORTALAMADEPOMIKTARI" Alias="ORTALAMADEPOMIKTARI" />
+              <Column Name="ORTALAMAGIRFIYAT" Alias="ORTALAMAGIRFIYAT" />
+              <Column Name="ORTALAMAGIRBIRIMFIYAT" Alias="ORTALAMAGIRBIRIMFIYAT" />
+              <Column Name="GARSONNO" Alias="GARSONNO" />
+              <Column Name="DEPOADI" Alias="DEPOADI" />
+              <Column Name="HAMSTOKGRUP" Alias="HAMSTOKGRUP" />
+              <Column Name="HAMGRUP" Alias="HAMGRUP" />
+              <Column Name="HAMANAGRUP" Alias="HAMANAGRUP" />
+              <Column Name="SATISNOKTASI" Alias="SATISNOKTASI" />
+              <Column Name="STOKDUSTUMU" Alias="STOKDUSTUMU" />
+              <Column Name="KISIMSUBE" Alias="KISIMSUBE" />
+              <Column Name="TOPLAMMIKTAR" Alias="TOPLAMMIKTAR" />
+              <Column Name="PORSIYON" Alias="PORSIYON" />
+              <Column Name="HAREKETTIPI" Alias="HAREKETTIPI" />
+              <Column Name="ARTIEKSI" Alias="ARTIEKSI" />
+              <Column Name="ISLEMTIPI" Alias="ISLEMTIPI" />
+              <Column Name="ORTALAMASATBIRIMFIYAT" Alias="ORTALAMASATBIRIMFIYAT" />
+              <Column Name="YIL" Alias="YIL" />
+              <Column Name="AY" Alias="AY" />
+              <Column Name="GUN" Alias="GUN" />
+              <Column Name="SAAT2" Alias="SAAT2" />
+              <Column Name="SAAT" Alias="SAAT" />
+              <Column Name="DAKIKA" Alias="DAKIKA" />
+              <Column Name="REPORT" Alias="REPORT" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Toplam Stok Miktarı" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="STOKADI" UniqueName="DataItem0" />
+        <Measure DataMember="STOKADI" SummaryType="Count" UniqueName="DataItem1" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem0" />
+        <Dimension DataMember="STOKADI" UniqueName="DataItem1" />
+        <Measure DataMember="STOKADI" SummaryType="Count" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem1" />
+      </SeriesDimensions>
+      <Argument UniqueName="DataItem0" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value UniqueName="DataItem2" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem Weight="81.849315068493155" DashboardItem="pieDashboardItem1" />
+      <LayoutItem Weight="18.150684931506849" DashboardItem="rangeFilterDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

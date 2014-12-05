@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="tr-TR">
+  <Title Text="Genel Hareket" />
+  <DataConnections>
+    <DataConnection Name="localhost_los_amigosConnection" ProviderKey="MySql">
+      <Parameters>
+        <Parameter Name="server" Value="localhost" />
+        <Parameter Name="database" Value="los_amigos" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+  </DataConnections>
+  <DataSources>
+    <DataSource ComponentName="dataSource1" Name="dash_conn">
+      <DataProvider DataConnection="localhost_los_amigosConnection" SupportSql="true">
+        <Selection>
+          <Table Name="genhar">
+            <Columns>
+              <Column Name="GENHARNO" Alias="GENHARNO" />
+              <Column Name="KISIMBOLUMNO" Alias="KISIMBOLUMNO" />
+              <Column Name="MASANO" Alias="MASANO" />
+              <Column Name="KISISAYISI" Alias="KISISAYISI" />
+              <Column Name="TUTAR" Alias="TUTAR" />
+              <Column Name="DOVIZTIPI" Alias="DOVIZTIPI" />
+              <Column Name="DURUM" Alias="DURUM" />
+              <Column Name="ISKORAN" Alias="ISKORAN" />
+              <Column Name="ISKTUTAR" Alias="ISKTUTAR" />
+              <Column Name="KDVDAHILHARIC" Alias="KDVDAHILHARIC" />
+              <Column Name="KDVTUTAR" Alias="KDVTUTAR" />
+              <Column Name="GARSON" Alias="GARSON" />
+              <Column Name="DURUM1" Alias="DURUM1" />
+              <Column Name="KISIM" Alias="KISIM" />
+              <Column Name="TARIH" Alias="TARIH" />
+              <Column Name="SAAT" Alias="SAAT" />
+              <Column Name="ADISYONNO" Alias="ADISYONNO" />
+              <Column Name="HARTIP" Alias="HARTIP" />
+              <Column Name="GIRIS" Alias="GIRIS" />
+              <Column Name="CIKIS" Alias="CIKIS" />
+              <Column Name="CARINO" Alias="CARINO" />
+              <Column Name="KAPATIPNO" Alias="KAPATIPNO" />
+              <Column Name="KAPATIPISMI" Alias="KAPATIPISMI" />
+              <Column Name="TARIHSIPBIT" Alias="TARIHSIPBIT" />
+              <Column Name="SAATSIPBIT" Alias="SAATSIPBIT" />
+              <Column Name="ADISYONYAZDIMI" Alias="ADISYONYAZDIMI" />
+              <Column Name="FATURAYAZDIMI" Alias="FATURAYAZDIMI" />
+              <Column Name="HESABAYAZDIMI" Alias="HESABAYAZDIMI" />
+              <Column Name="ACIKLAMA" Alias="ACIKLAMA" />
+              <Column Name="HAREKETTURU" Alias="HAREKETTURU" />
+              <Column Name="PRICEMALIYET" Alias="PRICEMALIYET" />
+              <Column Name="PRICEMALIYETYUZDE" Alias="PRICEMALIYETYUZDE" />
+              <Column Name="PRICEKAR" Alias="PRICEKAR" />
+              <Column Name="PRICENET" Alias="PRICENET" />
+              <Column Name="STOKDUSTUMU" Alias="STOKDUSTUMU" />
+              <Column Name="ISKONTOSUZTOPLAM" Alias="ISKONTOSUZTOPLAM" />
+              <Column Name="SERVISTUTARI" Alias="SERVISTUTARI" />
+              <Column Name="SERVISORAN" Alias="SERVISORAN" />
+              <Column Name="SERVISKDVTUTARI" Alias="SERVISKDVTUTARI" />
+              <Column Name="SERVISKDVSIZ" Alias="SERVISKDVSIZ" />
+              <Column Name="IADELER" Alias="IADELER" />
+              <Column Name="SERVISUCRETIINDIRIMI" Alias="SERVISUCRETIINDIRIMI" />
+              <Column Name="TUTARKDVSIZ" Alias="TUTARKDVSIZ" />
+              <Column Name="FIZYAZDIMI" Alias="FIZYAZDIMI" />
+              <Column Name="KAPATANISMI" Alias="KAPATANISMI" />
+              <Column Name="KAPATANTERMINAL" Alias="KAPATANTERMINAL" />
+              <Column Name="SAATANALIZ" Alias="SAATANALIZ" />
+              <Column Name="FISYAZDIMI" Alias="FISYAZDIMI" />
+              <Column Name="FIRAMISMI" Alias="FIRAMISMI" />
+              <Column Name="TELEFON1" Alias="TELEFON1" />
+              <Column Name="SEVKYAPANISMI" Alias="SEVKYAPANISMI" />
+              <Column Name="SUBEADI" Alias="SUBEADI" />
+              <Column Name="KOLTUK" Alias="KOLTUK" />
+              <Column Name="SENT" Alias="SENT" />
+              <Column Name="YUVARLAMALAR" Alias="YUVARLAMALAR" />
+              <Column Name="DOVIZTUTARI" Alias="DOVIZTUTARI" />
+              <Column Name="ADISYONNO2" Alias="ADISYONNO2" />
+              <Column Name="ISLEMTURNO" Alias="ISLEMTURNO" />
+              <Column Name="TOPLAMIARTIR" Alias="TOPLAMIARTIR" />
+              <Column Name="TOPLAMIEKSILT" Alias="TOPLAMIEKSILT" />
+              <Column Name="TOPLAMAGIRME" Alias="TOPLAMAGIRME" />
+              <Column Name="IKRAM_SATIRLARI_TOPLAMI" Alias="IKRAM_SATIRLARI_TOPLAMI" />
+              <Column Name="MUSTERITIPI" Alias="MUSTERITIPI" />
+              <Column Name="RAPORSIRANO" Alias="RAPORSIRANO" />
+              <Column Name="KASANO" Alias="KASANO" />
+              <Column Name="FATSERI_NO_TUT" Alias="FATSERI_NO_TUT" />
+              <Column Name="SIPKAPATIPI" Alias="SIPKAPATIPI" />
+              <Column Name="YIL" Alias="YIL" />
+              <Column Name="AY" Alias="AY" />
+              <Column Name="GUN" Alias="GUN" />
+              <Column Name="SAAT2" Alias="SAAT2" />
+              <Column Name="DAKIKA" Alias="DAKIKA" />
+              <Column Name="ADISYONYAZADET" Alias="ADISYONYAZADET" />
+              <Column Name="SAHISNO" Alias="SAHISNO" />
+              <Column Name="ADISOYADI" Alias="ADISOYADI" />
+              <Column Name="PARAUSTU" Alias="PARAUSTU" />
+              <Column Name="PUANHARAYAZDIMI" Alias="PUANHARAYAZDIMI" />
+              <Column Name="A_MARSSAATI" Alias="A_MARSSAATI" />
+              <Column Name="A_URETIMSAATI" Alias="A_URETIMSAATI" />
+              <Column Name="A_SEVKBASLAMASAATI" Alias="A_SEVKBASLAMASAATI" />
+              <Column Name="A_SEVKBITISSAATI" Alias="A_SEVKBITISSAATI" />
+              <Column Name="A_ASCIADI" Alias="A_ASCIADI" />
+              <Column Name="A_EMIRSAATI" Alias="A_EMIRSAATI" />
+              <Column Name="REPORT" Alias="REPORT" />
+              <Column Name="EXPORT" Alias="EXPORT" />
+              <Column Name="BAHSIS" Alias="BAHSIS" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Masa Toplam Fiyatı" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="MASANO" UniqueName="DataItem0" />
+        <Measure DataMember="CIKIS" UniqueName="DataItem1" />
+        <Measure DataMember="CIKIS" UniqueName="DataItem2" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem3" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure UniqueName="DataItem1" />
+      </HiddenMeasures>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem3" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="MASANO" UniqueName="DataItem0" />
+        <Measure DataMember="CIKIS" UniqueName="DataItem1" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem0" />
+      </SeriesDimensions>
+      <Argument UniqueName="DataItem2" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value UniqueName="DataItem1" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem Weight="83.561643835616437" DashboardItem="chartDashboardItem1" />
+      <LayoutItem Weight="16.438356164383563" DashboardItem="rangeFilterDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

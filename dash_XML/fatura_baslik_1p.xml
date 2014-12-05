@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="tr-TR">
+  <Title Text="Fatura Başlık" />
+  <DataConnections>
+    <DataConnection Name="localhost_los_amigosConnection" ProviderKey="MySql">
+      <Parameters>
+        <Parameter Name="server" Value="localhost" />
+        <Parameter Name="database" Value="los_amigos" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+  </DataConnections>
+  <DataSources>
+    <DataSource ComponentName="dataSource1" Name="dash_conn">
+      <DataProvider DataConnection="localhost_los_amigosConnection" SupportSql="true">
+        <Selection>
+          <Table Name="fatura_baslik">
+            <Columns>
+              <Column Name="id" Alias="id" />
+              <Column Name="kdvoran" Alias="kdvoran" />
+              <Column Name="kdvtutar" Alias="kdvtutar" />
+              <Column Name="toplam" Alias="toplam" />
+              <Column Name="kdvsiztoplam" Alias="kdvsiztoplam" />
+              <Column Name="faturano" Alias="faturano" />
+              <Column Name="tarih" Alias="tarih" />
+              <Column Name="saat" Alias="saat" />
+              <Column Name="carino" Alias="carino" />
+              <Column Name="cariadi" Alias="cariadi" />
+              <Column Name="carisoyadi" Alias="carisoyadi" />
+              <Column Name="carifirma" Alias="carifirma" />
+              <Column Name="vergidairesi" Alias="vergidairesi" />
+              <Column Name="vergino" Alias="vergino" />
+              <Column Name="sube" Alias="sube" />
+              <Column Name="vadetarihi" Alias="vadetarihi" />
+              <Column Name="odemetipi" Alias="odemetipi" />
+              <Column Name="faturatipi" Alias="faturatipi" />
+              <Column Name="iskontooran" Alias="iskontooran" />
+              <Column Name="iskontotutar" Alias="iskontotutar" />
+              <Column Name="carharno" Alias="carharno" />
+              <Column Name="tevkifateh" Alias="tevkifateh" />
+              <Column Name="tevkifattutar" Alias="tevkifattutar" />
+              <Column Name="carharnotah" Alias="carharnotah" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Cari Toplam" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="cariadi" UniqueName="DataItem0" />
+        <Measure DataMember="toplam" UniqueName="DataItem1" />
+        <Dimension DataMember="tarih" DateTimeGroupInterval="MonthYear" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="cariadi" UniqueName="DataItem0" />
+        <Dimension DataMember="tarih" DateTimeGroupInterval="MonthYear" UniqueName="DataItem1" />
+        <Measure DataMember="toplam" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem0" />
+      </SeriesDimensions>
+      <Argument UniqueName="DataItem1" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value UniqueName="DataItem2" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem Weight="82.15" DashboardItem="pieDashboardItem1" />
+      <LayoutItem Weight="17.85" DashboardItem="rangeFilterDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

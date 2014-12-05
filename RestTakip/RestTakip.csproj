@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71943CB0-FFDD-4599-9017-255BBC1B5D70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RestTakip</RootNamespace>
+    <AssemblyName>RestTakip</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Dashboard.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v14.1.Win, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.1.UI, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.1.Wizard, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v14.1.Win, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v14.1.Extensions, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.5\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dashboards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboards.Designer.cs">
+      <DependentUpon>dashboards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatura_baslik_1c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fatura_baslik_1c.Designer.cs">
+      <DependentUpon>fatura_baslik_1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatura_baslik_1p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fatura_baslik_1p.Designer.cs">
+      <DependentUpon>fatura_baslik_1p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatura_detay1c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fatura_detay1c.Designer.cs">
+      <DependentUpon>fatura_detay1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatura_detay1p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fatura_detay1p.Designer.cs">
+      <DependentUpon>fatura_detay1p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatura_detay2c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fatura_detay2c.Designer.cs">
+      <DependentUpon>fatura_detay2c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatura_detay2p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fatura_detay2p.Designer.cs">
+      <DependentUpon>fatura_detay2p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="genhar_1c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="genhar_1c.Designer.cs">
+      <DependentUpon>genhar_1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="genhar_1p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="genhar_1p.Designer.cs">
+      <DependentUpon>genhar_1p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="genhar_2c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="genhar_2c.Designer.cs">
+      <DependentUpon>genhar_2c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="genhar_2p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="genhar_2p.Designer.cs">
+      <DependentUpon>genhar_2p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stokhar_1c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="stokhar_1c.Designer.cs">
+      <DependentUpon>stokhar_1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stokhar_1p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="stokhar_1p.Designer.cs">
+      <DependentUpon>stokhar_1p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stokhar_2c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="stokhar_2c.Designer.cs">
+      <DependentUpon>stokhar_2c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stokhar_2p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="stokhar_2p.Designer.cs">
+      <DependentUpon>stokhar_2p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stokhar_3c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="stokhar_3c.Designer.cs">
+      <DependentUpon>stokhar_3c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stokhar_3p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="stokhar_3p.Designer.cs">
+      <DependentUpon>stokhar_3p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uretimhar_1c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="uretimhar_1c.Designer.cs">
+      <DependentUpon>uretimhar_1c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uretimhar_1p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="uretimhar_1p.Designer.cs">
+      <DependentUpon>uretimhar_1p.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uretimhar_2c.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="uretimhar_2c.Designer.cs">
+      <DependentUpon>uretimhar_2c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uretimhar_2p.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="uretimhar_2p.Designer.cs">
+      <DependentUpon>uretimhar_2p.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dashboards.resx">
+      <DependentUpon>dashboards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatura_baslik_1c.resx">
+      <DependentUpon>fatura_baslik_1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatura_baslik_1p.resx">
+      <DependentUpon>fatura_baslik_1p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatura_detay1c.resx">
+      <DependentUpon>fatura_detay1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatura_detay1p.resx">
+      <DependentUpon>fatura_detay1p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatura_detay2c.resx">
+      <DependentUpon>fatura_detay2c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatura_detay2p.resx">
+      <DependentUpon>fatura_detay2p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="genhar_1c.resx">
+      <DependentUpon>genhar_1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="genhar_1p.resx">
+      <DependentUpon>genhar_1p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="genhar_2c.resx">
+      <DependentUpon>genhar_2c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="genhar_2p.resx">
+      <DependentUpon>genhar_2p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="stokhar_1c.resx">
+      <DependentUpon>stokhar_1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stokhar_1p.resx">
+      <DependentUpon>stokhar_1p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stokhar_2c.resx">
+      <DependentUpon>stokhar_2c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stokhar_2p.resx">
+      <DependentUpon>stokhar_2p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stokhar_3c.resx">
+      <DependentUpon>stokhar_3c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stokhar_3p.resx">
+      <DependentUpon>stokhar_3p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uretimhar_1c.resx">
+      <DependentUpon>uretimhar_1c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uretimhar_1p.resx">
+      <DependentUpon>uretimhar_1p.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uretimhar_2c.resx">
+      <DependentUpon>uretimhar_2c.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uretimhar_2p.resx">
+      <DependentUpon>uretimhar_2p.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

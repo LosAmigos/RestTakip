@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="tr-TR">
+  <Title Text="Stok Hareketi" />
+  <DataConnections>
+    <DataConnection Name="localhost_los_amigosConnection" ProviderKey="MySql">
+      <Parameters>
+        <Parameter Name="server" Value="localhost" />
+        <Parameter Name="database" Value="los_amigos" />
+        <Parameter Name="read only" Value="1" />
+        <Parameter Name="generateConnectionHelper" Value="false" />
+      </Parameters>
+    </DataConnection>
+  </DataConnections>
+  <DataSources>
+    <DataSource ComponentName="dataSource1" Name="dash_conn">
+      <DataProvider DataConnection="localhost_los_amigosConnection" SupportSql="true">
+        <Selection>
+          <Table Name="stokhar">
+            <Columns>
+              <Column Name="STOKHARNO" Alias="STOKHARNO" />
+              <Column Name="GENHARNO" Alias="GENHARNO" />
+              <Column Name="ADISYONNO" Alias="ADISYONNO" />
+              <Column Name="PRN_NO" Alias="PRN_NO" />
+              <Column Name="STOKADI" Alias="STOKADI" />
+              <Column Name="GRUPADI" Alias="GRUPADI" />
+              <Column Name="ADET" Alias="ADET" />
+              <Column Name="SAAT" Alias="SAAT" />
+              <Column Name="KOLTUK" Alias="KOLTUK" />
+              <Column Name="ACIKLAMA" Alias="ACIKLAMA" />
+              <Column Name="KDVTUTAR" Alias="KDVTUTAR" />
+              <Column Name="YAZDIMIEH" Alias="YAZDIMIEH" />
+              <Column Name="SILINDIMIEH" Alias="SILINDIMIEH" />
+              <Column Name="CIKISFIYAT" Alias="CIKISFIYAT" />
+              <Column Name="GIRISFIYAT" Alias="GIRISFIYAT" />
+              <Column Name="CARINO" Alias="CARINO" />
+              <Column Name="CIKISKDVSIZ" Alias="CIKISKDVSIZ" />
+              <Column Name="GIRISKDVSIZ" Alias="GIRISKDVSIZ" />
+              <Column Name="TARIH" Alias="TARIH" />
+              <Column Name="BIRIM" Alias="BIRIM" />
+              <Column Name="PORSIYON" Alias="PORSIYON" />
+              <Column Name="Y1" Alias="Y1" />
+              <Column Name="GARSONNO" Alias="GARSONNO" />
+              <Column Name="PRICEMALIYET" Alias="PRICEMALIYET" />
+              <Column Name="PRICEMALIYETYUZDE" Alias="PRICEMALIYETYUZDE" />
+              <Column Name="PRICEKAR" Alias="PRICEKAR" />
+              <Column Name="PRICENET" Alias="PRICENET" />
+              <Column Name="DEPOADI" Alias="DEPOADI" />
+              <Column Name="HAMSTOKGRUP" Alias="HAMSTOKGRUP" />
+              <Column Name="HAMGRUP" Alias="HAMGRUP" />
+              <Column Name="HAMANAGRUP" Alias="HAMANAGRUP" />
+              <Column Name="SATISNOKTASI" Alias="SATISNOKTASI" />
+              <Column Name="STOKDUSTUMU" Alias="STOKDUSTUMU" />
+              <Column Name="ISKORAN" Alias="ISKORAN" />
+              <Column Name="ISKTUTAR" Alias="ISKTUTAR" />
+              <Column Name="SAATANALIZ" Alias="SAATANALIZ" />
+              <Column Name="KISIMSUBE" Alias="KISIMSUBE" />
+              <Column Name="MASAISMI" Alias="MASAISMI" />
+              <Column Name="AMBALAJAGIRLIGI" Alias="AMBALAJAGIRLIGI" />
+              <Column Name="SENT" Alias="SENT" />
+              <Column Name="HAMSTOKNO" Alias="HAMSTOKNO" />
+              <Column Name="DEPOGELIRNOKTASINDAN" Alias="DEPOGELIRNOKTASINDAN" />
+              <Column Name="SATISSTOKKONTROLUYAP" Alias="SATISSTOKKONTROLUYAP" />
+              <Column Name="TOPLAMMIKTAR" Alias="TOPLAMMIKTAR" />
+              <Column Name="GARSON" Alias="GARSON" />
+              <Column Name="ISLEMTURNO" Alias="ISLEMTURNO" />
+              <Column Name="KAPATIPISMI" Alias="KAPATIPISMI" />
+              <Column Name="URUNTASINDI" Alias="URUNTASINDI" />
+              <Column Name="TASIYAN" Alias="TASIYAN" />
+              <Column Name="KAPATANISMI" Alias="KAPATANISMI" />
+              <Column Name="FATSERI_NO_TUT" Alias="FATSERI_NO_TUT" />
+              <Column Name="SIPKAPATIPI" Alias="SIPKAPATIPI" />
+              <Column Name="YIL" Alias="YIL" />
+              <Column Name="AY" Alias="AY" />
+              <Column Name="GUN" Alias="GUN" />
+              <Column Name="SAAT2" Alias="SAAT2" />
+              <Column Name="DAKIKA" Alias="DAKIKA" />
+              <Column Name="IKRAM_SATIRLARI_TOPLAMI" Alias="IKRAM_SATIRLARI_TOPLAMI" />
+              <Column Name="SAHISNO" Alias="SAHISNO" />
+              <Column Name="REPORT" Alias="REPORT" />
+              <Column Name="EXPORT" Alias="EXPORT" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Grup Toplam Çıkış Fiyatı" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="GRUPADI" UniqueName="DataItem0" />
+        <Measure DataMember="CIKISFIYAT" UniqueName="DataItem1" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="GRUPADI" UniqueName="DataItem0" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem1" />
+        <Measure DataMember="CIKISFIYAT" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem0" />
+      </SeriesDimensions>
+      <Argument UniqueName="DataItem1" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value UniqueName="DataItem2" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem Weight="81.849315068493155" DashboardItem="pieDashboardItem1" />
+      <LayoutItem Weight="18.150684931506849" DashboardItem="rangeFilterDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
