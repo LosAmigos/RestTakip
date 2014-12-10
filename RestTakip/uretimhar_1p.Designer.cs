@@ -66,7 +66,7 @@
             this.pieDashboardItem1.ComponentName = "pieDashboardItem1";
             measure1.DataMember = "ADET";
             dimension3.DataMember = "TARIH";
-            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear;
+            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.DayMonthYear;
             this.pieDashboardItem1.DataItemRepository.Clear();
             this.pieDashboardItem1.DataItemRepository.Add(dimension1, "DataItem0");
             this.pieDashboardItem1.DataItemRepository.Add(measure1, "DataItem1");
@@ -90,7 +90,7 @@
             // rangeFilterDashboardItem1
             // 
             dimension4.DataMember = "TARIH";
-            dimension4.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear;
+            dimension4.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.DayMonthYear;
             this.rangeFilterDashboardItem1.Argument = dimension4;
             this.rangeFilterDashboardItem1.ComponentName = "rangeFilterDashboardItem1";
             dimension5.DataMember = "HAMMADDEADI";

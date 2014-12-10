@@ -68,7 +68,7 @@
             measure1.DataMember = "CIKIS";
             measure2.DataMember = "CIKIS";
             dimension2.DataMember = "TARIH";
-            dimension2.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear;
+            dimension2.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.DayMonthYear;
             this.chartDashboardItem1.DataItemRepository.Clear();
             this.chartDashboardItem1.DataItemRepository.Add(dimension1, "DataItem0");
             this.chartDashboardItem1.DataItemRepository.Add(measure1, "DataItem1");
@@ -102,7 +102,7 @@
             // rangeFilterDashboardItem1
             // 
             dimension3.DataMember = "TARIH";
-            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear;
+            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.DayMonthYear;
             this.rangeFilterDashboardItem1.Argument = dimension3;
             this.rangeFilterDashboardItem1.ComponentName = "rangeFilterDashboardItem1";
             dimension4.DataMember = "MASANO";

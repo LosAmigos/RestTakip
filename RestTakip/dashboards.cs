@@ -22,20 +22,20 @@ namespace RestTakip
 
         }
         MySql.Data.MySqlClient.MySqlConnection conn;
-        string myConnectionString="server=127.0.0.1;uid=root;pwd=Esra1993;database=losamigos;";
+        string myConnectionString="server=127.0.0.1;uid=root;pwd=sql123;database=los_amigos;";
 
         static string tablo = "";
 
         private void cariToplamToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2013\Projects\RestTakip\dash_XML\fatura_baslik_1";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\fatura_baslik_1";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
 
         }
         private void stokAdediToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2013\Projects\RestTakip\dash_XML\fatura_detay1";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\fatura_detay1";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
             
@@ -43,7 +43,7 @@ namespace RestTakip
 
         private void stokToplamFiyatiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2013\Projects\RestTakip\dash_XML\fatura_detay2";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\fatura_detay2";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
            
@@ -51,7 +51,7 @@ namespace RestTakip
 
         private void masaToplamFiyatiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2013\Projects\RestTakip\dash_XML\genhar_1";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\genhar_1";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
             
@@ -59,7 +59,7 @@ namespace RestTakip
 
         private void garsonToplamÇikisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2013\Projects\RestTakip\dash_XML\genhar_2";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\genhar_2";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
 
@@ -67,7 +67,7 @@ namespace RestTakip
 
         private void stokToplamPorsiyonuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2013\Projects\RestTakip\dash_XML\stokhar_2";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\stokhar_2";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
             
@@ -75,7 +75,7 @@ namespace RestTakip
 
         private void grupToplamÇikisFiyatiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2013\Projects\RestTakip\dash_XML\stokhar_3";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\stokhar_3";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
 
@@ -83,7 +83,7 @@ namespace RestTakip
 
         private void toplamStokMiktariToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2013\Projects\RestTakip\dash_XML\uretimhar_2";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\uretimhar_2";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
           
@@ -143,14 +143,14 @@ namespace RestTakip
 
         private void stokToplamÇıkışFiyatıToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2010\Projects\RestTakip\dash_XML\stokhar_1";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\stokhar_1";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
         }
 
         private void toplamHammaddeMiktarıToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tablo = @"C:\Users\ESRAERİK\Documents\Visual Studio 2010\Projects\RestTakip\dash_XML\uretimhar_1";
+            tablo = @"C:\Users\Melis\Documents\Visual Studio 2012\Projects\RestTakip\dash_XML\uretimhar_1";
             rbChart.Checked = true;
             dashboardViewer1.LoadDashboard(tablo + "c.xml");
         }
@@ -158,6 +158,7 @@ namespace RestTakip
         private void dashboards_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Close();
+            Application.Exit();
         }
     }
 }

@@ -117,9 +117,9 @@
             this.pieDashboardItem1,
             this.rangeFilterDashboardItem1});
             dashboardLayoutItem1.DashboardItem = this.pieDashboardItem1;
-            dashboardLayoutItem1.Weight = 79.940119760479035D;
+            dashboardLayoutItem1.Weight = 82.15D;
             dashboardLayoutItem2.DashboardItem = this.rangeFilterDashboardItem1;
-            dashboardLayoutItem2.Weight = 20.059880239520957D;
+            dashboardLayoutItem2.Weight = 17.85D;
             dashboardLayoutGroup1.ChildNodes.AddRange(new DevExpress.DashboardCommon.DashboardLayoutNode[] {
             dashboardLayoutItem1,
             dashboardLayoutItem2});

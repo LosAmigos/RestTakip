@@ -113,7 +113,7 @@
     <Pie ComponentName="pieDashboardItem1" Name="Garson Toplam Çıkış" DataSource="dataSource1">
       <DataItems>
         <Dimension DataMember="GARSON" UniqueName="DataItem0" />
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem1" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem1" />
         <Measure DataMember="CIKIS" UniqueName="DataItem2" />
       </DataItems>
       <SeriesDimensions>
@@ -129,7 +129,7 @@
     <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dataSource1">
       <DataItems>
         <Dimension DataMember="GARSON" UniqueName="DataItem0" />
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem1" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem1" />
         <Measure DataMember="CIKIS" UniqueName="DataItem2" />
       </DataItems>
       <SeriesDimensions>

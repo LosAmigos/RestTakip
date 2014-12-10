@@ -63,7 +63,7 @@
             measure1.DataMember = "STOKADI";
             measure1.SummaryType = DevExpress.DashboardCommon.SummaryType.Count;
             dimension2.DataMember = "TARIH";
-            dimension2.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear;
+            dimension2.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.DayMonthYear;
             this.pieDashboardItem1.DataItemRepository.Clear();
             this.pieDashboardItem1.DataItemRepository.Add(dimension1, "DataItem0");
             this.pieDashboardItem1.DataItemRepository.Add(measure1, "DataItem1");
@@ -86,7 +86,7 @@
             // rangeFilterDashboardItem1
             // 
             dimension3.DataMember = "TARIH";
-            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear;
+            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.DayMonthYear;
             this.rangeFilterDashboardItem1.Argument = dimension3;
             this.rangeFilterDashboardItem1.ComponentName = "rangeFilterDashboardItem1";
             dimension4.DataMember = "STOKADI";
@@ -119,9 +119,9 @@
             this.pieDashboardItem1,
             this.rangeFilterDashboardItem1});
             dashboardLayoutItem1.DashboardItem = this.pieDashboardItem1;
-            dashboardLayoutItem1.Weight = 81.849315068493155D;
+            dashboardLayoutItem1.Weight = 81.8D;
             dashboardLayoutItem2.DashboardItem = this.rangeFilterDashboardItem1;
-            dashboardLayoutItem2.Weight = 18.150684931506849D;
+            dashboardLayoutItem2.Weight = 18.2D;
             dashboardLayoutGroup1.ChildNodes.AddRange(new DevExpress.DashboardCommon.DashboardLayoutNode[] {
             dashboardLayoutItem1,
             dashboardLayoutItem2});

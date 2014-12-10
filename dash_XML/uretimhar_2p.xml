@@ -63,7 +63,7 @@
       <DataItems>
         <Dimension DataMember="STOKADI" UniqueName="DataItem0" />
         <Measure DataMember="STOKADI" SummaryType="Count" UniqueName="DataItem1" />
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem2" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem2" />
       </DataItems>
       <SeriesDimensions>
         <SeriesDimension UniqueName="DataItem2" />
@@ -77,7 +77,7 @@
     </Pie>
     <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dataSource1">
       <DataItems>
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem0" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem0" />
         <Dimension DataMember="STOKADI" UniqueName="DataItem1" />
         <Measure DataMember="STOKADI" SummaryType="Count" UniqueName="DataItem2" />
       </DataItems>

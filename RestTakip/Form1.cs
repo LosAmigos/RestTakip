@@ -17,8 +17,8 @@ namespace RestTakip
             InitializeComponent();
           
         }
-            string kullanici_adi = "1";
-            string sifre = "2";
+            string kullanici_adi = "admin";
+            string sifre = "losamigos";
     
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,16 +29,14 @@ namespace RestTakip
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtAd.Text == kullanici_adi && txtPw.Text == sifre)
-            {
-              
-              /*  dashboards newform = new dashboards();
-                newform.ShowDialog();
-                this.Close();*/
-                
+            {               
+                dashboards newform = new dashboards();
+                newform.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı!");
+                MessageBox.Show("Kullanıcı Adı \ Şifre Eksik veya Hatalı!");
             }
         }
 

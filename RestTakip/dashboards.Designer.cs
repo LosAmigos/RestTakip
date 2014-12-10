@@ -88,7 +88,7 @@
             // cariToplamToolStripMenuItem
             // 
             this.cariToplamToolStripMenuItem.Name = "cariToplamToolStripMenuItem";
-            this.cariToplamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cariToplamToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.cariToplamToolStripMenuItem.Text = "Cari Toplam";
             this.cariToplamToolStripMenuItem.Click += new System.EventHandler(this.cariToplamToolStripMenuItem_Click);
             // 

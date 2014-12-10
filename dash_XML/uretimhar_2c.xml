@@ -62,7 +62,7 @@
     <Chart ComponentName="chartDashboardItem1" Name="Toplam Stok Miktarı" DataSource="dataSource1">
       <DataItems>
         <Dimension DataMember="STOKADI" UniqueName="DataItem0" />
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem1" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem1" />
         <Measure DataMember="STOKADI" SummaryType="Count" UniqueName="DataItem2" />
       </DataItems>
       <SeriesDimensions>
@@ -83,7 +83,7 @@
     </Chart>
     <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dataSource1">
       <DataItems>
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem0" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem0" />
         <Dimension DataMember="STOKADI" UniqueName="DataItem1" />
         <Measure DataMember="STOKADI" SummaryType="Count" UniqueName="DataItem2" />
       </DataItems>

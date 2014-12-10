@@ -61,7 +61,7 @@
             dimension1});
             this.pieDashboardItem1.ComponentName = "pieDashboardItem1";
             dimension2.DataMember = "TARIH";
-            dimension2.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear;
+            dimension2.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.DayMonthYear;
             measure1.DataMember = "CIKIS";
             this.pieDashboardItem1.DataItemRepository.Clear();
             this.pieDashboardItem1.DataItemRepository.Add(dimension1, "DataItem0");
@@ -85,7 +85,7 @@
             // rangeFilterDashboardItem1
             // 
             dimension3.DataMember = "TARIH";
-            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.MonthYear;
+            dimension3.DateTimeGroupInterval = DevExpress.DashboardCommon.DateTimeGroupInterval.DayMonthYear;
             this.rangeFilterDashboardItem1.Argument = dimension3;
             this.rangeFilterDashboardItem1.ComponentName = "rangeFilterDashboardItem1";
             dimension4.DataMember = "GARSON";

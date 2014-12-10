@@ -115,7 +115,7 @@
         <Dimension DataMember="MASANO" UniqueName="DataItem0" />
         <Measure DataMember="CIKIS" UniqueName="DataItem1" />
         <Measure DataMember="CIKIS" UniqueName="DataItem2" />
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem3" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem3" />
       </DataItems>
       <HiddenMeasures>
         <Measure UniqueName="DataItem1" />
@@ -140,7 +140,7 @@
       <DataItems>
         <Dimension DataMember="MASANO" UniqueName="DataItem0" />
         <Measure DataMember="CIKIS" UniqueName="DataItem1" />
-        <Dimension DataMember="TARIH" DateTimeGroupInterval="MonthYear" UniqueName="DataItem2" />
+        <Dimension DataMember="TARIH" DateTimeGroupInterval="DayMonthYear" UniqueName="DataItem2" />
       </DataItems>
       <SeriesDimensions>
         <SeriesDimension UniqueName="DataItem0" />
